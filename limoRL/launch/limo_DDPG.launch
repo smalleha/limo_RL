@@ -1,0 +1,6 @@
+<launch>
+    <arg name="stage" default="3"/>
+    <param name="stage_number"  value="$(arg stage)"/>
+    <node pkg="limoRL" name="limo_torch_dqn" type="limo_ddpg.py" output="screen"/>
+    <node pkg="limoRL" name="unit_1" type="unit_1.py" output="screen"/>
+</launch>
